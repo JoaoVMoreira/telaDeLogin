@@ -1,0 +1,33 @@
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../medias/mountains-55067.png) right top;
+    background-size: cover;
+}
+
+.conteiner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logoImg{
+    margin-top: 200px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logoImg img{
+    width: 120px;
+    height: 120px;
+}
+
+.areaLogin input{
+    height: 38px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 0;
+}

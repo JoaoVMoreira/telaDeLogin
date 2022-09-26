@@ -1,0 +1,107 @@
+-cria uma pasta com o arquivo de contextos
+
+import { createContext } from "react"
+
+export const CostumerContexts = createContext()
+
+-em seguida serão envolvidas as partes da aplicação que deseja inserir no contexto
+
+
+-----Na outra pagina
+
+
+import { CostumerContexts } from "./pasta"
+
+<CostumerContexts.Provider value={{---informações a serem compartilhadas---}}>
+    ---codigo---
+<CostumerContexts.Provider/>
+
+
+
+-----Utilizando os componentes
+
+import { useContext } from "react"
+import { CostumerContexts } from "./pasta"
+
+
+const { ---variavel que deseja utilizar--- } = useContext(---Nome do contexto---)
+
+
+
+
+
+
+---------------------------------
+
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom'
+import Login from '../pages/Login'
+import Cadastro from '../pages/Cadastro'
+import Dashboard from '../pages/Dashboard'
+import { useState } from 'react'
+import { AuthContext } from '../contexts/auth'
+
+function RoutesApp() {
+
+
+    const [useres, setUseres] = useState(false)
+    const logado = (id) => {
+        setUseres(true)
+    }
+
+
+    return (
+        <BrowserRouter>
+            <AuthContext.Provider value={{authentecated: !!useres, useres, logado}}>
+                <Routes>
+                    <Route exact path='/' element={<Login />} />
+                    <Route exact path='/cadastro' element={<Cadastro />} />
+                    <Route exact path='/dashboard' element={
+                        !!useres ? <Dashboard /> : <Navigate to={'/cadastro'} />
+                    } />
+                </Routes>
+            </AuthContext.Provider>    
+        </BrowserRouter>
+    )
+}
+
+export default RoutesApp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { Route ,Routes, BrowserRouter, Navigate } from 'react-router-dom'  
+import Login from '../pages/Login'
+import Cadastro from '../pages/Cadastro'
+import Dashboard from '../pages/Dashboard'
+import { useState } from 'react'
+
+function RoutesApp() {
+    
+    const [loged, setLoged] = useState(true)
+    
+    return (
+            <BrowserRouter>
+                    <Routes>
+                        <Route exact path='/' element={<Login/>}/>
+                        <Route exact path='/cadastro' element={<Cadastro/>}/>
+                        <Route exact path='/dashboard' element={
+                        loged ? <Dashboard /> : <Navigate to={'/cadastro'} />
+                        }/>
+                    </Routes>
+            </BrowserRouter>
+    )
+}
+
+export default RoutesApp

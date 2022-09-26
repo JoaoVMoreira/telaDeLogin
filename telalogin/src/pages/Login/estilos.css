@@ -1,19 +1,21 @@
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../medias/mountains-55067.png) right top;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../medias/mountains-55067.png) right top;
     background-size: cover;
+    font-family: sans-serif;
 }
 
 .conteiner {
-    height: 100%;
+    height: 620px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: auto;
 }
 
 .logoImg{
-    margin-top: 200px;
-    margin-bottom: 20px;
+
+    margin-bottom: 5px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -22,12 +24,68 @@ body{
 .logoImg img{
     width: 120px;
     height: 120px;
+    margin-bottom: 50px;
 }
 
-.areaLogin input{
-    height: 38px;
-    width: 300px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    border: 0;
+a {
+    text-decoration: none;
+    color: white;
 }
+
+.areaBotao button{
+    font-size: 20px;
+    background-color: #ED3562;
+    border-radius: 30px;
+    color: white;
+    width:380px;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+}
+
+.areaBotao :hover {
+    background-color: #aa2f4c;
+    transition: 1s;
+}
+
+.areabtn {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.areabtn:hover {
+    text-decoration: underline;
+}
+
+/*-----------LOGIN-----------*/
+
+.areaLogin input{
+    height: 43px;
+    width: 380px;
+    margin-bottom: 8px;
+    border-radius: 30px;
+    border: 0;
+    opacity: 0.5;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+.areaLogin {
+    margin-bottom: 20px;
+}
+
+.areaLogin h1{
+    color: white;
+    text-align: center;
+    font-size: 28px;
+}
+
+/*-------------CADASTRO-------------*/
+
+.logoImgCadastro img {
+    width: 120px;
+    height: 120px;
+}
+
+/*-------------Dashboard-------------*/

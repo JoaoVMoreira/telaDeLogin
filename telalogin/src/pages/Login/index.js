@@ -1,8 +1,7 @@
 import { useContext, useState } from 'react'
 import{Link} from 'react-router-dom'
-import './estilos.css'
-import firebase from 'firebase'
 import { AuthContext } from '../../contexts/auth'
+import '../../estilos/estilos.css'
 
 
 function Login(){

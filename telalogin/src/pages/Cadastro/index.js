@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/auth'
 
 function Cadastro() {
-
+    //States criadas
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [nivel, setNivel] = useState('')
 
-    const { cadastraUser } = useContext(AuthContext)
+    const { cadastraUser } = useContext(AuthContext) //Importando função de cadastro do authContext
 
-    function Cadastrar(){
+    function Cadastrar(){ //Chamando a função de cadastro
         cadastraUser(email, senha, nome, cargo, nivel)
     }
 

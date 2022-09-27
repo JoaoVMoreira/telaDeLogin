@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../medias/mountains-55067.png) right top;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../medias/mountains-55067.png) right top;
     background-size: cover;
     font-family: sans-serif;
 }
@@ -89,3 +89,27 @@ a {
 }
 
 /*-------------Dashboard-------------*/
+
+.banner {
+    background-color: white;
+    width: 100%;
+    height: ;
+}
+
+.lista li{
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.lista{
+    padding-bottom: 40px;
+    padding-top: 25px;
+}
+
+.dashboardContent h1{
+    color: #ED3562;
+    font: 900;
+}

@@ -7,8 +7,8 @@ import Dashboard from "../pages/Dashboard"
 import AuthProvider from "../contexts/auth";
 
 export default function RoutesApp(){
-    return(
-        <AuthProvider>
+    return(//Informando provedor + definindo rotas
+        <AuthProvider> 
             <BrowserRouter>
                 
                 <Routes>

@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import 'firebase/firestore'
 import 'firebase/auth'
-
+//Imoportando conteudo do firebase utilizado no decorrer da aplicação
 let firebaseConfig = {
     apiKey: "AIzaSyB7jwu1bBArtCo0yAe8rq3Yvw9KaLGyZ8k",
     authDomain: "paginalogin-cc86c.firebaseapp.com",
